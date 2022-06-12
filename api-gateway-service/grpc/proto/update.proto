@@ -1,0 +1,14 @@
+syntax = "proto3";
+option go_package = "./grpc/gen";
+package update;
+
+service Update {
+  rpc Create(CreateRequest) returns (Empty);
+}
+
+message CreateRequest {
+  string npm = 1;
+  string name = 2;
+}
+
+message Empty {}

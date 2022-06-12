@@ -1,0 +1,5 @@
+FROM locustio/locust:latest
+WORKDIR /mnt/locust/
+ADD locustfile.py .
+RUN pip3 install locust
+CMD ["-f", "locustfile.py"]

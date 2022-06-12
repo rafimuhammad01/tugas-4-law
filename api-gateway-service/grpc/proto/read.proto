@@ -1,0 +1,17 @@
+syntax = "proto3";
+option go_package = "./grpc/gen";
+package read;
+
+service Read {
+  rpc Read(ReadRequest) returns (ReadResponse);
+}
+
+message ReadRequest {
+  string npm = 1;
+}
+
+message ReadResponse {
+  int32 id = 1;
+  string npm = 2;
+  string name = 3;
+}
